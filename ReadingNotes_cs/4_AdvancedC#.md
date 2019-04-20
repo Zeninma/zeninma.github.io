@@ -60,3 +60,29 @@ x.HasValue; // is false as the cast fails
 ## Operator Overloading
 
 ## Extension Method
+* Allow an existing type to be exteded with new methods without altering the definition of the original type. It is a static method of a static class.
+```cs
+public static class StringHelper
+{
+    public static bool IsCapitalized (this string s)
+    {
+        // Do some manipulation around the string s.
+    }
+}
+
+// Then type string will be extended with the IsCapitalized method
+"abs".IsCapitalized();
+// This method will be replaced with the following statement during the compile time.
+StringHelper.IsCapitalized("abs");
+```
+* Interface can be extended as well. The extended method then can be applied to all the classes that implement the interface.
+
+## Dynamic Binding
+* By using the type dynamic, we are telling the compiler to relax that we are sure the method exists for the given type.
+```cs
+dynamic duck = GetSomeInstance();
+duck.Quack(); // This statement would otherwise make the compiler complain.
+```
+Skip the rest of this section.
+
+## Attributes
