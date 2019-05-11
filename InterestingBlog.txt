@@ -1,0 +1,3 @@
+## Thoughts on contributing to a Open Source Project.
+* https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/
+* https://tirania.org/blog/archive/2010/Dec-31.html
